@@ -1,9 +1,11 @@
 FROM openroberta/base-x64:31
 
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash
-# and install node 
-RUN apt install nodejs npm -y
-# confirm that it was successful 
+RUN apt-get update -yq \
+    && apt-get install curl gnupg -yq \
+    && curl -sL https://deb.nodesource.com/setup_12.x | bash \
+    && apt-get install nodejs -yq \
+    && npm install html-entities
+
 RUN node -v
 # npm installs automatically 
 RUN npm -v
