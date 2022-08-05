@@ -10,7 +10,7 @@ RUN apt-get update -yq \
     && npm install html-entities
 
 # shallow clone of the repo. Run mvn once to install most all the artifacts needed in /root/.m2 to speed up later builds
-ARG GITREPO='https://github.com/OpenRoberta/openroberta-lab.git'
+ARG GITREPO='https://github.com/rikvrba/openroberta-lab-test.git'
 ARG BRANCH=develop
 
 RUN git clone --depth=1 -b $BRANCH $GITREPO
