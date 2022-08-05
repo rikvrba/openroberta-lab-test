@@ -1,5 +1,7 @@
 FROM ubuntu
 
+WORKDIR /opt
+
 RUN apt-get update && apt-get -y upgrade && \
     apt-get install -y locales && \
     apt-get install -y tzdata && \
