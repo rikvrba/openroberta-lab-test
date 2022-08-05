@@ -14,7 +14,7 @@ RUN apt-get update && apt-get -y upgrade && \
     apt-get clean
 
 RUN git clone https://github.com/rikvrba/openroberta-lab-test.git
-RUN cd openroberta-lab-test
+WORKDIR /opt/openroberta-lab-test
 RUN ls
 
 RUN mvn clean install 
