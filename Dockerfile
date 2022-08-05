@@ -2,7 +2,7 @@ FROM openroberta/base-x64:31
 
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash
 # and install node 
-RUN apt-get install nodejs -y
+RUN apt install nodejs npm -y
 # confirm that it was successful 
 RUN node -v
 # npm installs automatically 
