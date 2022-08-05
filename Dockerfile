@@ -1,4 +1,4 @@
-FROM scratch
+FROM ubuntu
 
 RUN echo "START"
 RUN mvn clean install 
