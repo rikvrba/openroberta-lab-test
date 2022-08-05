@@ -1,4 +1,4 @@
-FROM psychemedia/robertalab
+FROM openroberta/base-x64
 
 WORKDIR /
 
