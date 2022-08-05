@@ -6,7 +6,6 @@ RUN apt-get update && apt-get -y upgrade && \
     apt-get install -y git maven && \
     git config --global core.fileMode false && \
     apt-get install -y python-pip && \
-    pip install uflash esptool && \
     apt-get update && apt-get -y upgrade && \
     apt-get install -y openjdk-8-jdk && \
     update-java-alternatives -s java-1.8.0-openjdk-amd64 && \
