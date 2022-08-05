@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM psychemedia/robertalab
 
 RUN echo "START"
 RUN mvn clean install 
