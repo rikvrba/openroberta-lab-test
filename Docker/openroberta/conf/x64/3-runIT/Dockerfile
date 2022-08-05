@@ -1,3 +1,6 @@
+ARG BASE_VERSION
+FROM openroberta/base-x64
+
 WORKDIR /opt
 
 RUN apt-get update -yq \
