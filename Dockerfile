@@ -1,17 +1,23 @@
-FROM openroberta/base-x64:31
+FROM ubuntu
 
-RUN apt-get update -yq \
-    && apt-get install curl gnupg -yq \
-    && curl -sL https://deb.nodesource.com/setup_12.x | bash \
-    && apt-get install nodejs -yq \
-    && npm install html-entities
+RUN apt-get update && apt-get -y upgrade && \
+    apt-get install -y locales && \
+    apt-get install -y tzdata && \
+    apt-get install -y git maven && \
+    git config --global core.fileMode false && \
+    apt-get install -y python-pip && \
+    pip install uflash esptool && \
+    apt-get update && apt-get -y upgrade && \
+    apt-get install -y openjdk-8-jdk && \
+    update-java-alternatives -s java-1.8.0-openjdk-amd64 && \
+    apt-get install -y wget && \
+    apt-get install -y nodejs npm && \
+    apt-get clean
 
-RUN node -v
-# npm installs automatically 
-RUN npm -v
-
-RUN echo "START"
+RUN git clone https://github.com/rikvrba/openroberta-lab-test.git
+RUN cd openroberta-lab-test
 RUN ls
+
 RUN mvn clean install 
 RUN npm install && npm run build
 
