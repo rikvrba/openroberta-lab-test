@@ -1,6 +1,7 @@
 FROM psychemedia/robertalab
 
 RUN echo "START"
+RUN ls
 RUN mvn clean install 
 RUN npm install && npm run build   
 
