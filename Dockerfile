@@ -1,3 +1,5 @@
+FROM scratch
+
 RUN echo "START"
 RUN mvn clean install 
 RUN npm install && npm run build   
