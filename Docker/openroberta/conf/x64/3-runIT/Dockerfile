@@ -1,5 +1,5 @@
 ARG BASE_VERSION
-FROM openroberta/base-x64:$BASE_VERSION
+FROM openroberta/base-x64
 
 WORKDIR /opt
 
