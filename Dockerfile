@@ -1,5 +1,7 @@
 FROM psychemedia/robertalab
 
+WORKDIR /
+
 RUN echo "START"
 RUN ls
 RUN mvn clean install 
