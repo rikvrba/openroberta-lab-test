@@ -1,6 +1,4 @@
-FROM openroberta/base-x64
-
-WORKDIR /
+FROM openroberta/base-x64:31
 
 RUN echo "START"
 RUN ls
