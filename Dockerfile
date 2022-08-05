@@ -24,5 +24,4 @@ RUN npm install && npm run build
 
 RUN ./admin.sh -git-mode create-empty-db
 
-ENTRYPOINT start-from-git
-CMD ["./ora.sh start-from-git"]
+ENTRYPOINT ./ora.sh start-from-git
